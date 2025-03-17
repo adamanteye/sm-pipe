@@ -1,14 +1,17 @@
 [package]
+authors = ["adamanteye <ada@adamanteye.cc>"]
+edition = "2024"
+license = "MIT"
 name = "sm-pipe"
 version = "0.1.0"
-edition = "2024"
-authors = ["adamanteye <ada@adamanteye.cc>"]
-license = "MIT"
 
 [features]
 telegram = ["dep:frankenstein"]
+twitter = ["dep:twitter-v2"]
 
 [dependencies]
-frankenstein = { version = "0.39.2", features = [
-  "trait-async",
+frankenstein = { version = "0.39", features = ["trait-async"], optional = true }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+twitter-v2 = { version = "0.1", default-features = false, features = [
+  "native-tls",
 ], optional = true }
