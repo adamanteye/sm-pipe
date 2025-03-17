@@ -1,0 +1,12 @@
+[package]
+name = "sm-pipe"
+version = "0.1.0"
+edition = "2024"
+authors = ["adamanteye <ada@adamanteye.cc>"]
+license = "MIT"
+
+[features]
+telegram = ["frankenstein/trait-async"]
+
+[dependencies]
+frankenstein = "0.39.2"
