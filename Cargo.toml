@@ -6,7 +6,9 @@ authors = ["adamanteye <ada@adamanteye.cc>"]
 license = "MIT"
 
 [features]
-telegram = ["frankenstein/trait-async"]
+telegram = ["dep:frankenstein"]
 
 [dependencies]
-frankenstein = "0.39.2"
+frankenstein = { version = "0.39.2", features = [
+  "trait-async",
+], optional = true }
