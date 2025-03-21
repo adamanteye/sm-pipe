@@ -10,7 +10,7 @@ telegram = ["dep:frankenstein"]
 twitter = ["dep:twitter-v2"]
 
 [dependencies]
-frankenstein = { version = "0.39", features = ["trait-async"], optional = true }
+frankenstein = { version = "0.40", features = ["trait-async"], optional = true }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 twitter-v2 = { version = "0.1", default-features = false, features = [
   "native-tls",
